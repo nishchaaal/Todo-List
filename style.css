@@ -1,0 +1,213 @@
+:root {
+  --primary-color: #e78b56;
+  --secondary-color: #fbd5bf;
+  --btn-primary: #56b2e7;
+  --btn-delete: #da5555;
+  --btn-complete: #55da76;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid #000; */
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.active {
+  background: #ffc4a2;
+}
+
+/* header */
+
+.header {
+  background: var(--primary-color);
+  padding: 1em;
+}
+
+.heading {
+  color: #fff;
+}
+
+/* main-sidebar */
+
+.main {
+  flex-grow: 1;
+  display: flex;
+}
+
+.nav {
+  width: 400px;
+  padding: 2em;
+  background: var(--secondary-color);
+}
+
+.nav > h2 {
+  padding: 0.3em;
+  margin: 0.3em 0;
+  cursor: pointer;
+}
+
+.nav > h2,
+.projects-items {
+  border-radius: 10px;
+}
+
+.nav > h2:hover,
+.projects-items:hover {
+  background: #ffc4a2;
+}
+
+.projects {
+  margin: 0.5em 0;
+}
+
+.projects-title {
+  font-size: 1.7rem;
+  padding: 0.3em;
+}
+
+.projects-items {
+  margin-top: 0.4em;
+  margin-left: 1em;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.3em;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0.5em 0.8em;
+  margin: 1em;
+  color: #fff;
+  background: var(--btn-primary);
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* main-lists-section */
+
+.lists {
+  flex-grow: 1;
+}
+
+.lists-section {
+  max-width: 70%;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 3em 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #e4e4e4;
+}
+
+.task {
+  width: 600px;
+  cursor: pointer;
+  padding: 1em 0;
+}
+
+.btn-actions {
+  max-width: 400px;
+}
+
+.btn-complete {
+  background: var(--btn-complete);
+}
+
+.btn-edit {
+  background: var(--primary-color);
+}
+
+.btn-complete,
+.btn-edit {
+  padding: 0.4em 0.7em;
+  margin: 0.3em;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* input-overlay */
+
+.input-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.input-overlay-main {
+  background: #e4e4e4;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.input-overlay-main * {
+  margin: 0.6em 0;
+  padding: 0.5em;
+  font-family: inherit;
+}
+
+.input-overlay-details {
+  resize: none;
+}
+
+.input-overlay-buttons {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0;
+}
+
+.input-overlay-ok {
+  background: var(--btn-complete);
+}
+
+.input-overlay-cancel {
+  background: var(--btn-delete);
+}
+
+.input-overlay-ok,
+.input-overlay-cancel {
+  width: 45%;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* footer */
+
+.footer {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.4em;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: bold;
+}
